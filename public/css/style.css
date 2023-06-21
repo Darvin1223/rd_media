@@ -1,0 +1,205 @@
+@charset "UTF-8";
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1.6rem; /* Equivale a 16px */
+  background-color: #fff;
+  margin: 15px 15px 0;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "IBM Plex Serif", serif;
+}
+
+p, a {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.light-mode {
+  /* Estilos para el modo claro */
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode {
+  /* Estilos para el modo oscuro */
+  background-color: #121212;
+  color: #ffffff;
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode p {
+  color: #fff;
+}
+.dark-mode .principal_news_container::after {
+  background-color: #fff;
+}
+
+.dark-mode_icon {
+  color: #000;
+}
+
+.oculto {
+  display: none;
+}
+
+.header .header_bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+}
+.header .header_bar .logo_container {
+  height: 4.8rem;
+  margin: 2.5rem 0;
+}
+.header .header_bar .logo_container .logo--img {
+  width: 6.5rem;
+  height: 3.444rem;
+}
+.header .header_bar .nav-header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: -100%;
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  height: 300%;
+  width: 42%;
+  z-index: 9999;
+  border: solid 1px #000;
+  border-top: none;
+  border-left: none;
+}
+.header .header_bar .nav-header a {
+  padding: 5px 0 5px 10px;
+  font-size: 1.3rem;
+}
+.header .header_bar .nav-header .nav-header_buttons_mode {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header .header_bar .nav-header--show {
+  left: -6%;
+}
+
+.principal_news_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.principal_news_container::after {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: #000;
+  border-radius: 5%;
+  animation: bar 5s linear forwards;
+  position: absolute;
+  left: 50%;
+  top: 100%; /* Posición inicial por encima del contenedor */
+  transform: translateX(-50%);
+}
+@keyframes bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%; /* Ancho máximo */
+  }
+}
+.principal_news_container .principal_news .principal_news__title, .principal_news_container .principal_news .principal_news__text {
+  margin-bottom: 1.6rem;
+}
+.principal_news_container .principal_news .principal_news__title {
+  width: 100%;
+}
+.principal_news_container .principal_news__info {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 1.6rem;
+  color: #EC4C27;
+}
+.principal_news_container .principal_news__info .principal_news__info--elements:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.principal_news_container .principal_news_img {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+}
+.principal_news_container .principal_news_img .principal_news_img--elements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1rem;
+}
+
+.news_week {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.news_week .news_week--title {
+  margin-bottom: 1.6rem;
+}
+.news_week .news_week--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+.news_week .news_week--container .news_week--news {
+  display: flex;
+  flex-direction: column;
+}
+.news_week .news_week--container .news_week--news .news_week--news--img {
+  width: 13.7rem;
+  height: 13.7rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 5%;
+}
+.news_week .news_week--container .news_week--news .news_week--news--sub-title {
+  line-height: 18px;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .news_week .news_week--container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .news_week .news_week--container .news_week--news .news_week--news--sub-title {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,61 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 1.6rem; /* Equivale a 16px */
+    background-color: #fff;
+    margin: 15px 15px 0;
+}
+img{
+    width: 100%;
+}
+
+h1, h2,h3{
+    font-family: 'IBM Plex Serif', serif;
+}
+p,a{
+    font-family: 'Inter', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+.btn{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.light-mode {
+    /* Estilos para el modo claro */
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .dark-mode {
+    /* Estilos para el modo oscuro */
+    background-color: #121212;
+    color: #ffffff;
+    h1,h2,h3,h4,p{
+        color: #fff;
+    }
+    .principal_news_container{
+        &::after{
+            background-color: #fff;
+        }
+    }
+  }
+  .dark-mode_icon{
+    color: #000;
+  }
+.oculto{display: none;}

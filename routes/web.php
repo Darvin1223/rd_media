@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+/* The getting routes */
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/arte-y-cultura', function(){
+    return view('cultura');
+});
+
+
+/* The posting routes */

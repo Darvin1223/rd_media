@@ -1,0 +1,46 @@
+.header{
+    .header_bar{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #000;
+        .logo_container{
+            height: 4.8rem;
+            margin: 2.5rem 0;
+            .logo--img{
+                width: 6.5rem;
+                height: 3.444rem;
+            }
+            
+        }
+        .nav-header{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            left: -100%;
+            position: absolute;
+            top: 100%;
+           
+            background-color: #fff;
+            height: 300%;
+            width: 42%;
+            z-index: 9999;
+            border: solid 1px #000;
+            border-top: none;
+            border-left: none;
+            a{
+                padding: 5px 0 5px 10px;
+                font-size: 1.3rem;
+            }
+            .nav-header_buttons_mode{
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+        .nav-header--show{
+            left: -6%;
+        }
+
+    }
+}
